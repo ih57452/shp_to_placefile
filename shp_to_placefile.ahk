@@ -66,7 +66,8 @@ Gui, Add, Edit, x232 y432 w50 h20 vlimit_e, %limit_e%
 Gui, Add, Text, x292 y435 w50 h20, West:
 Gui, Add, Edit, x322 y432 w50 h20 vlimit_w, %limit_w%
 Gui, Add, Button, x22 y472 w170 h30, Add To Placefile
-Gui, Add, Button, x272 y472 w100 h30 gGuiClose, Exit
+Gui, Add, Button, x202 y472 w80 h30, Help
+Gui, Add, Button, x292 y472 w80 h30 gGuiClose, Exit
 ; Generated using SmartGUI Creator 4.0
 
 LV_ModifyCol(1, "Integer")
@@ -79,6 +80,10 @@ hwnd := WinExist()
 WinSet, Trans, 0
 Gui, Show,, Shapefile to Placefile
 SetTimer, fade_in, 30
+Return
+
+ButtonHelp:
+Run, https://github.com/ih57452/shp_to_placefile/wiki
 Return
 
 GuiClose:
